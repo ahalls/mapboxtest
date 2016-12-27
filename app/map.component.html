@@ -1,0 +1,15 @@
+<StackLayout class="p-20">
+    <Label text="Map Page" class="h1 text-center"></Label>
+    <Button text="Back to Tap" (tap)="onBackTap()" class="btn btn-primary btn-active"></Button>
+    <ContentView height="240" width="240">
+      <Mapbox
+          accessToken='pk.eyJ1IjoiZGF3ZXMiLCJhIjoiY2l1b2phdG03MDFsbDJ6bWx5bTE1ejVjeiJ9.5VPHUVrG_Sv0AWP-kc66UQ'
+          mapStyle="light"
+          latitude="52.3702160"
+          longitude="4.8951680"
+          zoomLevel="3"
+          showUserLocation="true"
+          (mapReady)="onMapReady($event)">
+      </Mapbox>
+    </ContentView>
+</StackLayout>
