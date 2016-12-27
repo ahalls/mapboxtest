@@ -1,4 +1,5 @@
 hooks/
+lib/
 platforms/
 app/**/*.js
 app/**/*.map
