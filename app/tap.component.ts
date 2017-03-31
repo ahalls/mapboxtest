@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import {RouterExtensions} from "nativescript-angular/router";;
+import { GC } from 'utils/utils';
 
 @Component({
     selector: 'tap',
@@ -22,6 +23,9 @@ export class TapComponent {
     
     public onTap() {
         this.counter--;
+
+        GC();
+        console.log("onTap:GC()");
     }
 
     public onMapTap() {
