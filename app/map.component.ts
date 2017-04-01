@@ -24,12 +24,12 @@ export class MapComponent implements OnDestroy {
        console.log("MapComponent::ngOnDestroy");
        //console.dump(this.mapboxViewRef.nativeElement);
        // this.mapbox.destroy();
-       if (isIOS) {
-                 this.mapbox.mapView.removeFromSuperview();
-                 this.mapbox.mapView.delegate = null;
-                 this.mapbox.mapView = null;
-       }
-       setTimeout(() => this.cleanupAfterDelay(), 500)
+    //    if (isIOS) {
+    //              this.mapbox.mapView.removeFromSuperview();
+    //              this.mapbox.mapView.delegate = null;
+    //              this.mapbox.mapView = null;
+    //    }
+    //    setTimeout(() => this.cleanupAfterDelay(), 500)
         
     }
     cleanupAfterDelay() {
@@ -39,7 +39,6 @@ export class MapComponent implements OnDestroy {
     public onBackTap() {
         this._routerExtensions.navigate(["/tap"], 
             <any>  { clearHistory: true });
-        GC();
         console.log("MapComponent::onBackTap:GC");
     }
     
